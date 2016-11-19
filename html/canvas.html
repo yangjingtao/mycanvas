@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/shape.js"></script>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        canvas{
+            background: #ccc;
+            position: fixed;left: 0;right:0 ;top: 50px;
+            margin:auto;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var canvas=document.querySelector("canvas");
+            var cobj=canvas.getContext("2d");
+            var obj=new shape(canvas,cobj);
+            obj.type="rect";
+            obj.style="fill";
+            obj.strokeStyle="red";
+            obj.draw();
+        }
+
+    </script>
+</head>
+<body>
+    <canvas width="800" height="500">
+
+    </canvas>
+</body>
+<script>
+//    window.onload=function () {
+//        var canvas=document.querySelector("canvas");
+//        var cobj=canvas.getContext("2d");
+//
+//        /*绘制线条*/
+//        var arr=[];
+//        canvas.onmousedown=function(e){
+//            var cx=e.offsetX;
+//            var cy=e.offsetY;
+//
+//            canvas.onmousemove=function(e){
+//                var movex=e.offsetX;
+//                var movey=e.offsetY;
+//                cobj.clearRect(0,0,canvas.width,canvas.height);
+//                if(arr.length>0) {
+//                    cobj.putImageData(arr[arr.length - 1], 0, 0);
+//                }
+//                cobj.beginPath();
+//                cobj.moveTo(cx,cy);
+//                cobj.lineTo(movex,movey);
+//                cobj.stroke();
+//            }
+//
+//            canvas.onmouseup=function(){
+//                arr.push(cobj.getImageData(0,0,canvas.width,canvas.height));
+//                canvas.onmousemove=null;
+//                canvas.onmouseup=null;
+//            }
+//        }
+//    }
+
+</script>
+</html>
